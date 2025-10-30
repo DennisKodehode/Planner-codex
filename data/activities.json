@@ -1,0 +1,131 @@
+[
+  {
+    "city": "New York",
+    "coordinates": { "lat": 40.7128, "lon": -74.006 },
+    "timezones": ["America/New_York"],
+    "activities": [
+      {
+        "id": "nyc-park-morning-jog",
+        "title": "Morning jog in Central Park",
+        "description": "Start your day with a run along the Reservoir Loop and grab a cold brew nearby.",
+        "tags": ["outdoors", "wellness"],
+        "bestFor": ["morning"],
+        "duration": 60,
+        "location": "Central Park"
+      },
+      {
+        "id": "nyc-highline",
+        "title": "High Line art walk",
+        "description": "Walk the elevated park, check out the art installations, and finish with lunch at Chelsea Market.",
+        "tags": ["outdoors", "art", "food"],
+        "bestFor": ["afternoon"],
+        "duration": 90,
+        "location": "The High Line"
+      },
+      {
+        "id": "nyc-moma",
+        "title": "MoMA highlights sprint",
+        "description": "Reserve a timed ticket and explore the modern art highlights in under two hours.",
+        "tags": ["art", "culture"],
+        "bestFor": ["afternoon", "rain"],
+        "duration": 120,
+        "location": "Midtown"
+      },
+      {
+        "id": "nyc-sunset-cruise",
+        "title": "Hudson River sunset cruise",
+        "description": "Wrap the day with skyline views and narration on a small-group cruise.",
+        "tags": ["romantic", "sightseeing"],
+        "bestFor": ["evening"],
+        "duration": 90,
+        "location": "Pier 83"
+      }
+    ]
+  },
+  {
+    "city": "San Francisco",
+    "coordinates": { "lat": 37.7749, "lon": -122.4194 },
+    "timezones": ["America/Los_Angeles"],
+    "activities": [
+      {
+        "id": "sf-sutro",
+        "title": "Sutro Baths sunrise lookout",
+        "description": "Watch waves crash into the ruins, then hike the Lands End trail.",
+        "tags": ["outdoors", "photography"],
+        "bestFor": ["sunrise", "morning"],
+        "duration": 75,
+        "location": "Lands End"
+      },
+      {
+        "id": "sf-ferry",
+        "title": "Ferry Building tasting tour",
+        "description": "Sample artisan vendors, oysters, and craft coffee inside the historic market.",
+        "tags": ["food", "culture"],
+        "bestFor": ["late-morning", "rain"],
+        "duration": 90,
+        "location": "Ferry Building"
+      },
+      {
+        "id": "sf-bike-golden-gate",
+        "title": "Bike across the Golden Gate",
+        "description": "Rent an e-bike and cruise over to Sausalito for lunch on the water.",
+        "tags": ["outdoors", "fitness"],
+        "bestFor": ["afternoon"],
+        "duration": 150,
+        "location": "Golden Gate Bridge"
+      },
+      {
+        "id": "sf-night-tour",
+        "title": "Night tour of Alcatraz",
+        "description": "Take the evening ferry for dramatic city views and fewer crowds.",
+        "tags": ["history", "sightseeing"],
+        "bestFor": ["evening"],
+        "duration": 180,
+        "location": "Pier 33"
+      }
+    ]
+  },
+  {
+    "city": "Chicago",
+    "coordinates": { "lat": 41.8781, "lon": -87.6298 },
+    "timezones": ["America/Chicago"],
+    "activities": [
+      {
+        "id": "chi-riverwalk",
+        "title": "Riverwalk architectural stroll",
+        "description": "Grab a latte and explore the Riverwalk's art, gardens, and skyline viewpoints.",
+        "tags": ["culture", "outdoors"],
+        "bestFor": ["morning", "afternoon"],
+        "duration": 90,
+        "location": "Chicago Riverwalk"
+      },
+      {
+        "id": "chi-art-institute",
+        "title": "Art Institute highlights",
+        "description": "See impressionist masterpieces and modern icons with the mobile guide.",
+        "tags": ["art", "culture"],
+        "bestFor": ["afternoon", "rain"],
+        "duration": 120,
+        "location": "Grant Park"
+      },
+      {
+        "id": "chi-lakefront",
+        "title": "Lakefront trail cycle",
+        "description": "Rent bikes and cruise the shoreline between Museum Campus and North Avenue Beach.",
+        "tags": ["fitness", "outdoors"],
+        "bestFor": ["morning", "sunny"],
+        "duration": 105,
+        "location": "Lakefront Trail"
+      },
+      {
+        "id": "chi-comedy",
+        "title": "Second City improv night",
+        "description": "Catch a legendary improv show with rotating casts and quick wit.",
+        "tags": ["nightlife", "comedy"],
+        "bestFor": ["evening"],
+        "duration": 120,
+        "location": "Old Town"
+      }
+    ]
+  }
+]
