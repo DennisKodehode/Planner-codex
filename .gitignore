@@ -1,0 +1,27 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# production
+/.next
+/out
+
+# misc
+.DS_Store
+*.log
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.next
+coverage
+playwright-report
+blob
+
+# prisma
+/prisma/dev.db
+
+# vscode
+.vscode
