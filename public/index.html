@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pulse Planner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="app-header">
+        <div>
+          <h1>Pulse Planner</h1>
+          <p class="tagline">
+            Build your day with natural voice commands, track your schedule, and slot in
+            curated activities around you.
+          </p>
+        </div>
+        <div class="status-panel" id="statusPanel">
+          <p class="status-line">
+            <span class="dot live" id="speechStatusDot"></span>
+            <span id="speechStatusText">Voice control ready</span>
+          </p>
+          <button id="toggleMic" class="ghost-btn" aria-pressed="false">Start listening</button>
+        </div>
+      </header>
+
+      <main class="main-grid">
+        <section class="card" aria-labelledby="planner-heading">
+          <header class="card-header">
+            <div>
+              <h2 id="planner-heading">Today's plan</h2>
+              <p class="card-subtitle">Add, complete, or remove tasks by voice or keyboard.</p>
+            </div>
+            <button id="summarizePlan" class="secondary-btn">Summarize day</button>
+          </header>
+
+          <form id="planForm" class="plan-form" autocomplete="off">
+            <div class="form-row">
+              <label>
+                <span>Title</span>
+                <input type="text" name="title" id="title" required placeholder="Catch up with Alex" />
+              </label>
+              <label>
+                <span>Start</span>
+                <input type="time" name="startTime" id="startTime" required />
+              </label>
+              <label>
+                <span>End</span>
+                <input type="time" name="endTime" id="endTime" />
+              </label>
+            </div>
+            <div class="form-row">
+              <label class="wide">
+                <span>Location</span>
+                <input type="text" name="location" id="location" placeholder="Brooklyn Roasting" />
+              </label>
+            </div>
+            <div class="form-row">
+              <label class="wide">
+                <span>Notes</span>
+                <textarea name="notes" id="notes" rows="2" placeholder="Bring the quarterly snapshot"></textarea>
+              </label>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="primary-btn">Add to plan</button>
+              <p class="hint">Try “Add a workout at 7am” or “Remove coffee with Alex”.</p>
+            </div>
+          </form>
+
+          <div id="planList" class="plan-list" role="list"></div>
+        </section>
+
+        <section class="card" aria-labelledby="insights-heading">
+          <header class="card-header">
+            <div>
+              <h2 id="insights-heading">Local pulse</h2>
+              <p class="card-subtitle">Weather, time of day, and nearby ideas to plug into your schedule.</p>
+            </div>
+          </header>
+          <div class="insight-grid">
+            <article class="insight" id="locationInsight">
+              <h3>Current area</h3>
+              <p id="locationLabel">Fetching location…</p>
+            </article>
+            <article class="insight">
+              <h3>Weather snapshot</h3>
+              <p id="weatherSummary">Waiting for coordinates…</p>
+              <p class="meta" id="weatherMeta"></p>
+            </article>
+            <article class="insight" id="timeInsight">
+              <h3>Best time to explore</h3>
+              <p id="timeSegment">—</p>
+            </article>
+          </div>
+
+          <div class="recommendations">
+            <div class="recommendations-header">
+              <h3>Recommended activities</h3>
+              <form id="interestForm" class="interest-form">
+                <label for="interests">Interests</label>
+                <input
+                  id="interests"
+                  name="interests"
+                  type="text"
+                  placeholder="outdoors, food, art"
+                  autocomplete="off"
+                />
+                <button type="submit" class="secondary-btn">Refresh</button>
+              </form>
+            </div>
+            <p class="meta" id="recommendationContext"></p>
+            <ul id="recommendationList" class="recommendation-list"></ul>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

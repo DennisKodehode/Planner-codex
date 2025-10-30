@@ -1,0 +1,10 @@
+{
+  "name": "planner-codex",
+  "version": "1.0.0",
+  "description": "Voice-enabled day planning web app with location-aware recommendations",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
